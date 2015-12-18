@@ -9,7 +9,7 @@ namespace damacanaapi.Models
     {
         public int Id { get; set; }
 
-        public int UserId { get; set; }
+       
 
         public DateTime CreatedOn { get; set; }
 
@@ -17,8 +17,10 @@ namespace damacanaapi.Models
 
         public List<Product> PurchaseList { get; set; }
 
-    
 
+        public virtual Product Product { get; set; }
+
+        public virtual Cart Cart { get; set; }
     }
  
 }

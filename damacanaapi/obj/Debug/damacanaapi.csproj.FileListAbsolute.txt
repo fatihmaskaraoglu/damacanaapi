@@ -42,3 +42,6 @@ C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\Swagger.Net.pdb
 C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\Swagger.Net.xml
 C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.Migrations.Initial.resources
 C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.csproj.GenerateResource.Cache
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.Migrations.Productchange.resources
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.Migrations.newtry.resources
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.Migrations.try2.resources

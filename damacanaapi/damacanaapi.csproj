@@ -184,6 +184,18 @@
     <Compile Include="Migrations\201512180818509_Initial.Designer.cs">
       <DependentUpon>201512180818509_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512180905050_Productchange.cs" />
+    <Compile Include="Migrations\201512180905050_Productchange.Designer.cs">
+      <DependentUpon>201512180905050_Productchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512180908312_newtry.cs" />
+    <Compile Include="Migrations\201512180908312_newtry.Designer.cs">
+      <DependentUpon>201512180908312_newtry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512180914289_try2.cs" />
+    <Compile Include="Migrations\201512180914289_try2.Designer.cs">
+      <DependentUpon>201512180914289_try2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\damacanaapiContext.cs" />
@@ -272,6 +284,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201512180818509_Initial.resx">
       <DependentUpon>201512180818509_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512180905050_Productchange.resx">
+      <DependentUpon>201512180905050_Productchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512180908312_newtry.resx">
+      <DependentUpon>201512180908312_newtry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512180914289_try2.resx">
+      <DependentUpon>201512180914289_try2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
