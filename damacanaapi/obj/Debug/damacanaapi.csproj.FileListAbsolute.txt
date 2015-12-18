@@ -30,3 +30,15 @@ C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\Antlr3.Runtime.pdb
 C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.csprojResolveAssemblyReference.cache
 C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.dll
 C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.pdb
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\EntityFramework.dll
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\EntityFramework.SqlServer.dll
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\EntityFramework.xml
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\EntityFramework.SqlServer.xml
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\Swagger.Net.dll
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\Swashbuckle.Core.dll
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\WebActivator.dll
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\WebActivatorEx.dll
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\Swagger.Net.pdb
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\bin\Swagger.Net.xml
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.Migrations.Initial.resources
+C:\Users\Fatih\Documents\GitHub\damacanaapi\damacanaapi\obj\Debug\damacanaapi.csproj.GenerateResource.Cache
