@@ -13,7 +13,7 @@ namespace damacanaapi.Models
 
         public decimal Price { get; set; }
 
-
+      
     }
    
 }

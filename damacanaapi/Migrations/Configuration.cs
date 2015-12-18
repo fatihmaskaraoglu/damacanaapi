@@ -4,7 +4,7 @@ namespace damacanaapi.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-
+    using damacanaapi.Models;
     internal sealed class Configuration : DbMigrationsConfiguration<damacanaapi.Models.damacanaapiContext>
     {
         public Configuration()
@@ -26,6 +26,12 @@ namespace damacanaapi.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+             context.Products.AddOrUpdate(x => x.Id,
+        new Product() { Id =1 ,Name ="Erikli",Price=5 },
+        new Product() { Id =2 ,Name ="Pýnar",Price=5 },
+        new Product() { Id =4 ,Name ="Sýrma",Price=5 });
         }
-    }
 }
+}
+    
+

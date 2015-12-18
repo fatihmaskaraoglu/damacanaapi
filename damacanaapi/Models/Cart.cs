@@ -9,9 +9,8 @@ namespace damacanaapi.Models
     {
         public int Id { get; set; }
         public decimal TotalPrice { get; set; }
-        
-        public List<Product> Cartproducts { get; set; }
+       // public ICollection<Product> Product { get; set; }
 
-        public virtual Product Product { get; set; }
+        public List <Product> Product { get; set; }
     }
 }

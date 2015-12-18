@@ -20,18 +20,24 @@ namespace damacanaapi.Controllers
         // GET: api/Carts
         public IQueryable<Cart> GetCarts()
         {
+  
             return db.Carts;
         }
 
         // GET: api/Carts/5
-        [ResponseType(typeof(Cart))]
+        [ResponseType(typeof(CartDTO))]
         public async Task<IHttpActionResult> GetCart(int id)
         {
-            Cart cart = await db.Carts.FindAsync(id);
-            if (cart == null)
-            {
-                return NotFound();
-            }
+            var cart = await db.Carts.Include(b => b.Product).Select(b =>
+            
+                new CartDetailDTO()
+                    {
+                         Id = b.Id,
+  
+                         }).SingleOrDefaultAsync(b => b.Id == id);
+
+
+
 
             return Ok(cart);
         }
@@ -79,13 +85,25 @@ namespace damacanaapi.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            //cart.Product
+            // select
             db.Carts.Add(cart);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = cart.Id }, cart);
-        }
+            // New code:
+            // Load author name
+            db.Entry(cart).Reference(x => x.Product).Load();
 
+            var dto = new CartDTO()
+            {
+                Id =cart.Id,
+ 
+       
+                
+            };
+
+            return CreatedAtRoute("DefaultApi", new { id = cart.Id }, dto);
+        }
         // DELETE: api/Carts/5
         [ResponseType(typeof(Cart))]
         public async Task<IHttpActionResult> DeleteCart(int id)
