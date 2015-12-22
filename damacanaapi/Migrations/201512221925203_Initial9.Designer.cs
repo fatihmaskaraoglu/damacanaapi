@@ -13,7 +13,7 @@ namespace damacanaapi.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201512221715265_Initial9"; }
+            get { return "201512221925203_Initial9"; }
         }
         
         string IMigrationMetadata.Source

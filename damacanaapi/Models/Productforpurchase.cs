@@ -7,19 +7,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace damacanaapi.Models
 {
-    public class Purchase
-    { 
+    public class ProductforPurchase
+    {
+       
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Key]
         public int Id { get; set; }
 
-         [Required]
-        public DateTime CreatedOn { get; set; }
-            
         [Required]
-        public decimal TotalPrice { get; set; }
+        public int Price { get; set; }
+        [Required]
+        public int ProductId { get; set; }
+        public virtual Product Product { get; set; }
+        [Required]
+        public int PurchaseId { get; set; }
 
-        public virtual ICollection<ProductforPurchase> ProductsinPurchase { get; set; }
+
     }
- 
 }

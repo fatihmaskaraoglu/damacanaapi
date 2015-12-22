@@ -180,6 +180,7 @@
     <Compile Include="Controllers\CartsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\PurchasesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,9 +232,9 @@
     <Compile Include="Migrations\201512181520218_Initial8.Designer.cs">
       <DependentUpon>201512181520218_Initial8.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201512221715265_Initial9.cs" />
-    <Compile Include="Migrations\201512221715265_Initial9.Designer.cs">
-      <DependentUpon>201512221715265_Initial9.cs</DependentUpon>
+    <Compile Include="Migrations\201512221925203_Initial9.cs" />
+    <Compile Include="Migrations\201512221925203_Initial9.Designer.cs">
+      <DependentUpon>201512221925203_Initial9.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -241,6 +242,7 @@
     <Compile Include="Models\CartDTO.cs" />
     <Compile Include="Models\damacanaapiContext.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Productforpurchase.cs" />
     <Compile Include="Models\Productincart.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -360,8 +362,8 @@
     <EmbeddedResource Include="Migrations\201512181520218_Initial8.resx">
       <DependentUpon>201512181520218_Initial8.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512221715265_Initial9.resx">
-      <DependentUpon>201512221715265_Initial9.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512221925203_Initial9.resx">
+      <DependentUpon>201512221925203_Initial9.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
