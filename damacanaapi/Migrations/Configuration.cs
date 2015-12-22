@@ -29,7 +29,8 @@ namespace damacanaapi.Migrations
              context.Products.AddOrUpdate(x => x.Id,
         new Product() { Id =1 ,Name ="Erikli",Price=5 },
         new Product() { Id =2 ,Name ="Pýnar",Price=5 },
-        new Product() { Id =4 ,Name ="Sýrma",Price=5 });
+        new Product() { Id =4 ,Name ="Sýrma",Price=5 },
+              new Product() { Id =3 ,Name ="Sýrma19",Price=5 });
         }
 }
 }

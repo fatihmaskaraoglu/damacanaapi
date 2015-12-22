@@ -20,53 +20,54 @@ namespace damacanaapi.Controllers
         // GET: api/Carts
         public IQueryable<Cart> GetCarts()
         {
-  
+            var carts = from c in db.Carts
+                        select new CartDTO()
+                        {
+                            Id = c.Id,
+                           
+                        };
+
             return db.Carts;
         }
 
         // GET: api/Carts/5
-        [ResponseType(typeof(CartDTO))]
+        [ResponseType(typeof(Cart))]
         public async Task<IHttpActionResult> GetCart(int id)
         {
-            var cart = await db.Carts.Include(b => b.Product).Select(b =>
-            
-                new CartDetailDTO()
-                    {
-                         Id = b.Id,
-  
-                         }).SingleOrDefaultAsync(b => b.Id == id);
-
-
-
+            Cart cart = await db.Carts.FindAsync(id);
+            if (cart == null)
+            {
+                return NotFound();
+            }
 
             return Ok(cart);
         }
 
-        // PUT: api/Carts/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutCart(int id, Cart cart)
+      
+        // POST: api/Carts
+        [ResponseType(typeof(Cart))]
+        public async Task<IHttpActionResult> PostCart(Cart cart)
         {
+            //cart.Id =
+            cart.CreatedOn = DateTime.Now;
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != cart.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(cart).State = EntityState.Modified;
+            db.Carts.Add(cart);
 
             try
             {
                 await db.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateException dbUpdateEx)
             {
-                if (!CartExists(id))
+                Console.WriteLine(dbUpdateEx.Message);
+                if (CartExists(cart.Id))
                 {
-                    return NotFound();
+                    return Conflict();
                 }
                 else
                 {
@@ -74,36 +75,9 @@ namespace damacanaapi.Controllers
                 }
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            return CreatedAtRoute("DefaultApi", new { id = cart.Id }, cart);
         }
 
-        // POST: api/Carts
-        [ResponseType(typeof(Cart))]
-        public async Task<IHttpActionResult> PostCart(Cart cart)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            //cart.Product
-            // select
-            db.Carts.Add(cart);
-            await db.SaveChangesAsync();
-
-            // New code:
-            // Load author name
-            db.Entry(cart).Reference(x => x.Product).Load();
-
-            var dto = new CartDTO()
-            {
-                Id =cart.Id,
- 
-       
-                
-            };
-
-            return CreatedAtRoute("DefaultApi", new { id = cart.Id }, dto);
-        }
         // DELETE: api/Carts/5
         [ResponseType(typeof(Cart))]
         public async Task<IHttpActionResult> DeleteCart(int id)
