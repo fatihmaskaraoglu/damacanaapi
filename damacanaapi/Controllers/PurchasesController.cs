@@ -39,8 +39,21 @@ namespace damacanaapi.Controllers
      
         // POST: api/Purchases
         [ResponseType(typeof(Purchase))]
-        public async Task<IHttpActionResult> PostPurchase(Purchase purchase)
+        public async Task<IHttpActionResult> PostPurchase(int Id)
         {
+            Cart cartToPurchase = db.Carts.Single(c => c.Id == Id);
+
+            // TODO handle case if Cart is not found
+
+            // copy some basic properties
+            Purchase purchase = new Purchase();
+            purchase.Id = 1;
+            purchase.CreatedOn = DateTime.Now;
+
+            purchase.TotalPrice = cartToPurchase.TotalPrice;
+
+
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

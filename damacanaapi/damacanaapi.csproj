@@ -232,9 +232,9 @@
     <Compile Include="Migrations\201512181520218_Initial8.Designer.cs">
       <DependentUpon>201512181520218_Initial8.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201512221925203_Initial9.cs" />
-    <Compile Include="Migrations\201512221925203_Initial9.Designer.cs">
-      <DependentUpon>201512221925203_Initial9.cs</DependentUpon>
+    <Compile Include="Migrations\201512230921361_Initial9.cs" />
+    <Compile Include="Migrations\201512230921361_Initial9.Designer.cs">
+      <DependentUpon>201512230921361_Initial9.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -362,8 +362,8 @@
     <EmbeddedResource Include="Migrations\201512181520218_Initial8.resx">
       <DependentUpon>201512181520218_Initial8.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512221925203_Initial9.resx">
-      <DependentUpon>201512221925203_Initial9.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512230921361_Initial9.resx">
+      <DependentUpon>201512230921361_Initial9.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

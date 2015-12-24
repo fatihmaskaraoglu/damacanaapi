@@ -48,14 +48,16 @@ namespace damacanaapi.Controllers
         [ResponseType(typeof(Cart))]
         public async Task<IHttpActionResult> PostCart(Cart cart)
         {
-            //cart.Id =
+            if (cart.Id == null)
+                cart.Id = 1;
+             
             cart.CreatedOn = DateTime.Now;
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
+                
             db.Carts.Add(cart);
 
             try
